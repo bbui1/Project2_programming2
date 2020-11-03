@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2/ImageData.h
+fstream
+-
+iostream
+-
+vector
+-
+cmath
+-
+
+C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2/main.cpp
+iostream
+-
+ImageData.h
+C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2/ImageData.h
+
