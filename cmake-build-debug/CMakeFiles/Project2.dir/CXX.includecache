@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2/ImageData.h
+C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2_programming2/ImageData.h
 fstream
 -
 iostream
@@ -16,9 +16,9 @@ vector
 cmath
 -
 
-C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2/main.cpp
+C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2_programming2/main.cpp
 iostream
 -
 ImageData.h
-C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2/ImageData.h
+C:/Users/lordr/Desktop/Project 2 - Image Processing/Project2_programming2/ImageData.h
 
