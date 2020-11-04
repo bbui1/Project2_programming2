@@ -39,7 +39,7 @@ struct ImageData {
 
         // normal constructor but we can leave it blank
         ImageData();
-        explicit ImageData(ifstream& inFile);
+        explicit ImageData(const string& fileName);
 
         // ============ Big Three ================
         ImageData(const ImageData& image);
@@ -53,7 +53,7 @@ struct ImageData {
 
         // file functions
         void readPicture(ifstream &inFile);
-        void writePicture(ofstream &outFile);
+        void writePicture(const string& fileName);
 
         // part 1
         ImageData multiply(ImageData& layer);

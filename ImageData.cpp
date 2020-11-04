@@ -42,7 +42,8 @@ ImageData::ImageData() {
 }
 
 // read file
-ImageData::ImageData(ifstream &inFile) {
+ImageData::ImageData(const string& fileName) {
+    ifstream inFile(fileName,ios_base::binary);
     this->readPicture(inFile);
 }
 
@@ -90,7 +91,8 @@ void ImageData::readPicture(ifstream &inFile) {
     readAllPixels(inFile);
 }
 
-void ImageData::writePicture(ofstream &outFile) {
+void ImageData::writePicture(const string& fileName) {
+    ofstream outFile(fileName, ios_base::binary);
     outFile.write(&idLength, sizeof(idLength));
     outFile.write(&colorMapType, sizeof(colorMapType));
     outFile.write((char*)&dataTypeCode, sizeof(dataTypeCode));

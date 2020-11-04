@@ -8,154 +8,105 @@ int main() {
 
     // load all input files
     // load layer 1
-    ifstream inFile("input/layer1.tga", ios_base::binary);
-    ImageData layer1(inFile);
-
+    ImageData layer1("input/layer1.tga");
     // load layer2
-    ifstream inFile2("input/layer2.tga", ios_base::binary);
-    ImageData layer2(inFile2);
-
+    ImageData layer2("input/layer2.tga");
     // load car
-    ifstream inFile3("input/car.tga", ios_base::binary);
-    ImageData car(inFile3);
-
+    ImageData car("input/car.tga");
     // load pattern2
-    ifstream inFile4("input/pattern2.tga", ios_base::binary);
-    ImageData pattern2(inFile4);
-
+    ImageData pattern2("input/pattern2.tga");
     // load text
-    ifstream inFile5("input/text.tga", ios_base::binary);
-    ImageData text(inFile5);
-
+    ImageData text("input/text.tga");
     // load circles
-    ifstream inFile6("input/circles.tga", ios_base::binary);
-    ImageData circles(inFile6);
-
+    ImageData circles("input/circles.tga");
     // load pattern1
-    ifstream inFile7("input/pattern1.tga", ios_base::binary);
-    ImageData pattern1(inFile7);
-
+    ImageData pattern1("input/pattern1.tga");
     // load red layer
-    ifstream inFile8("input/layer_red.tga", ios::binary);
-    ImageData layer_red(inFile8);
-
+    ImageData layer_red("input/layer_red.tga");
     // load green layer
-    ifstream inFile9("input/layer_green.tga", ios::binary);
-    ImageData layer_green(inFile9);
-
+    ImageData layer_green("input/layer_green.tga");
     // load blue layer
-    ifstream inFile10("input/layer_blue.tga", ios::binary);
-    ImageData layer_blue(inFile10);
-
+    ImageData layer_blue("input/layer_blue.tga");
     // load text2
-    ifstream inFile11("input/text2.tga", ios_base::binary);
-    ImageData text2(inFile11);
+    ImageData text2("input/text2.tga");
 
 
     // part 1 multiply --------------------------------------------------------------------
     // multiply the image with layer1 and pattern2
     ImageData part1 = layer1 * pattern1;
-
     // output the new image
-    ofstream outFile1("output/part1.tga", ios_base::binary);
-    part1.writePicture(outFile1);
+    part1.writePicture("output/part1.tga");
 
     // part 2 subtract --------------------------------------------------------------------
     // subtract
     ImageData part2 = car - layer2;
-
     // output the new image
-    ofstream outFile2("output/part2.tga", ios_base::binary);
-    part2.writePicture(outFile2);
+    part2.writePicture("output/part2.tga");
 
     // part 3 multiply then screen --------------------------------------------------------
     // multiply the results
     ImageData temp3 = pattern2 * layer1;
-
     // screen the result
     ImageData part3 = text.screen(temp3);
-
     // output the new image
-    ofstream outFile3("output/part3.tga", ios_base::binary);
-    part3.writePicture(outFile3);
+    part3.writePicture("output/part3.tga");
 
     // part 4 multiply then subtract ------------------------------------------------------
     // multiply
     ImageData temp4 = layer2 * circles;
-
     // subtract
     ImageData part4 = temp4 - pattern2;
-
     // output the new image
-    ofstream outFile4("output/part4.tga", ios_base::binary);
-    part4.writePicture(outFile4);
+    part4.writePicture("output/part4.tga");
 
     // part 5 overlay ---------------------------------------------------------------------
     // call overlay
     ImageData part5 = layer1.overLay(pattern1);
-
     // output the new image
-    ofstream outFile5("output/part5.tga", ios_base::binary);
-    part5.writePicture(outFile5);
+    part5.writePicture("output/part5.tga");
 
     // part 6 add 200 to the green channel ------------------------------------------------
     // add 200 green
     ImageData part6 = car.addGreen(200);
-
     // output the new image
-    ofstream outFile6("output/part6.tga", ios_base::binary);
-    part6.writePicture(outFile6);
+    part6.writePicture("output/part6.tga");
 
     // part 7 multiply red channel by 4 and blue channel by 0 -----------------------------
     // multiply red channel by 4 and blue channel by 0
     // keep green by multiplying by 1
     ImageData part7 = car.multiplyChannels(4, 1, 0);
-
     // output the new image
-    ofstream outFile7("output/part7.tga", ios_base::binary);
-    part7.writePicture(outFile7);
+    part7.writePicture("output/part7.tga");
 
     // part 8 split the channels from each color ------------------------------------------
     vector<ImageData> part8 = car.splitChannels();
-
     // split output
     ImageData part8_r = part8.at(0);
     ImageData part8_g = part8.at(1);
     ImageData part8_b = part8.at(2);
-
     // output each new image
     // red
-    ofstream outFileR("output/part8_r.tga", ios_base::binary);
-    part8_r.writePicture(outFileR);
-
+    part8_r.writePicture("output/part8_r.tga");
     // output each new image
     // green
-    ofstream outFileG("output/part8_g.tga", ios_base::binary);
-    part8_g.writePicture(outFileG);
-
+    part8_g.writePicture("output/part8_g.tga");
     // output each new image
     // blue
-    ofstream outFileB("output/part8_b.tga", ios_base::binary);
-    part8_b.writePicture(outFileB);
+    part8_b.writePicture("output/part8_b.tga");
 
     // part 9 merge layers into one image --------------------------------------------------
     // merge into one output
     ImageData part9 = layer_red.mergeChannels(layer_green, layer_blue);
-
     // output the new image
-    ofstream outFile9("output/part9.tga", ios_base::binary);
-    part9.writePicture(outFile9);
+    part9.writePicture("output/part9.tga");
 
     // part10 rotate 180 degrees -----------------------------------------------------------
     // flip the image
     ImageData part10 = text2.flipImage();
-
     // output the new image
-    ofstream outFile10("output/part10.tga", ios_base::binary);
-    part10.writePicture(outFile10);
+    part10.writePicture("output/part10.tga");
 
-
-
+    
 
     // compare the image to the given example
     cout << "Test #1...... ";
