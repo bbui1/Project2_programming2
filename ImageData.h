@@ -55,10 +55,6 @@ struct ImageData {
         void readPicture(ifstream &inFile);
         void writePicture(ofstream &outFile);
 
-
-        // design philosophy: we don't want any destructive tasks to the
-        // original picture data therefore we return an ImageData
-
         // part 1
         ImageData multiply(ImageData& layer);
         ImageData operator*(ImageData& layer);

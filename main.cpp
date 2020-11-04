@@ -156,6 +156,7 @@ int main() {
 
 
 
+
     // compare the image to the given example
     cout << "Test #1...... ";
     if (part1.testOutput("examples/EXAMPLE_part1.tga")) tests++;
@@ -181,7 +182,8 @@ int main() {
     if (part9.testOutput("examples/EXAMPLE_part9.tga")) tests++;
     cout << "Test #12..... ";
     if (part10.testOutput("examples/EXAMPLE_part10.tga")) tests++;
-    cout << tests << "/12" << endl;
+
+    cout << "Test results: " << tests << "/12" << endl;
 
 
     return 0;

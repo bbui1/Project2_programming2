@@ -338,7 +338,6 @@ bool ImageData::testOutput(const string &fileName) {
     }
 }
 
-
 ImageData::Pixel::Pixel(unsigned char _red, unsigned char _green, unsigned char _blue) {
     red = _red;
     green = _green;
