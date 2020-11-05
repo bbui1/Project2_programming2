@@ -211,9 +211,13 @@ ImageData ImageData::overLay(ImageData &layer) {
         Pixel& B = layer.picture.at(ii);
         Pixel& C = output.picture.at(ii);
 
-        double gray = sqrt(3*pow(128,2));
-        double tonalValue = B.getTone();
-        if (tonalValue < gray) {
+//        double gray = sqrt(3*pow(128,2));
+//        double tonalValue = B.getTone();
+
+        float gray = 0.5f;
+        float tonalValue = ((float)B.red + (float)B.green + (float)B.blue)/(255*3);
+
+        if (tonalValue <= gray) {
             // basically copying multiply but noe we're going to multiply by 2
             int red = (int) (round(2*((float) A.red*(float) B.red)/255.0f));
             if (red > 255) red = 255;
