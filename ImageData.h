@@ -37,8 +37,10 @@ struct ImageData {
         // integer to hold how big the width x height is
         unsigned int imageLength;
 
-        // normal constructor but we can leave it blank
-        ImageData();
+        // normal constructor but we can leave it blank hence = default
+        ImageData() = default;
+
+        // constructor to automatically load an image given the file name
         explicit ImageData(const string& fileName);
 
         // ============ Big Three ================

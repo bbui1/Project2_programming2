@@ -35,12 +35,6 @@ ImageData::~ImageData() {
     picture.clear();
 }
 
-// constructors
-// default
-ImageData::ImageData() {
-    // we don't need to initialize with anything really b/c we'll immediately load an image
-}
-
 // read file
 ImageData::ImageData(const string& fileName) {
     ifstream inFile(fileName,ios_base::binary);
