@@ -211,10 +211,9 @@ ImageData ImageData::overLay(ImageData &layer) {
         Pixel& B = layer.picture.at(ii);
         Pixel& C = output.picture.at(ii);
 
-
         double gray = sqrt(3*pow(128,2));
-
-        if (B.getTone() <= gray) {
+        double tonalValue = B.getTone();
+        if (tonalValue < gray) {
             // basically copying multiply but noe we're going to multiply by 2
             int red = (int) (round(2*((float) A.red*(float) B.red)/255.0f));
             if (red > 255) red = 255;
@@ -241,8 +240,10 @@ ImageData ImageData::overLay(ImageData &layer) {
             C = Pixel(red,green,blue);
         }
 
-
     }
+
+    // cout << "Red at 2441: " << (int) output.picture.at(2441).red << endl;
+
     return output;
 }
 
