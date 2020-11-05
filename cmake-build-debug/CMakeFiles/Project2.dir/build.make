@@ -79,28 +79,28 @@ include CMakeFiles/Project2.dir/flags.make
 CMakeFiles/Project2.dir/main.cpp.obj: CMakeFiles/Project2.dir/flags.make
 CMakeFiles/Project2.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project2.dir/main.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project2.dir\main.cpp.obj -c "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\main.cpp"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project2.dir\main.cpp.obj -c "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\main.cpp"
 
 CMakeFiles/Project2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project2.dir/main.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\main.cpp" > CMakeFiles\Project2.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\main.cpp" > CMakeFiles\Project2.dir\main.cpp.i
 
 CMakeFiles/Project2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project2.dir/main.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\main.cpp" -o CMakeFiles\Project2.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\main.cpp" -o CMakeFiles\Project2.dir\main.cpp.s
 
 CMakeFiles/Project2.dir/ImageData.cpp.obj: CMakeFiles/Project2.dir/flags.make
 CMakeFiles/Project2.dir/ImageData.cpp.obj: ../ImageData.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project2.dir/ImageData.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project2.dir\ImageData.cpp.obj -c "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\ImageData.cpp"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project2.dir\ImageData.cpp.obj -c "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\ImageData.cpp"
 
 CMakeFiles/Project2.dir/ImageData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project2.dir/ImageData.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\ImageData.cpp" > CMakeFiles\Project2.dir\ImageData.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\ImageData.cpp" > CMakeFiles\Project2.dir\ImageData.cpp.i
 
 CMakeFiles/Project2.dir/ImageData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project2.dir/ImageData.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\ImageData.cpp" -o CMakeFiles\Project2.dir\ImageData.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lordr\Desktop\Project 2 - Image Processing\Project2_programming2\ImageData.cpp" -o CMakeFiles\Project2.dir\ImageData.cpp.s
 
 # Object files for target Project2
 Project2_OBJECTS = \

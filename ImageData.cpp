@@ -173,6 +173,8 @@ ImageData ImageData::screen(ImageData &layer) {
 
 // check to see if the first 200 pixels are the same
 bool ImageData::comparePictures(const string& fileName) {
+    bool truthValue = true;
+
     //comparing to example file
     ifstream example(fileName,ios_base::binary);
     ImageData image;
@@ -182,11 +184,23 @@ bool ImageData::comparePictures(const string& fileName) {
         Pixel& pixel1 = picture.at(ii);
         Pixel& pixel2 = image.picture.at(ii);
 
-        if (pixel1.red - pixel2.red != 0) return false;
-        if (pixel1.green - pixel2.green != 0) return false;
-        if (pixel1.blue - pixel2.blue != 0) return false;
+        if (pixel1.red - pixel2.red != 0) {
+            cout << "red " << ii << endl;
+            cout << (int) pixel1.red << " " << (int) pixel2.red << endl;
+            truthValue = false;
+        }
+        if (pixel1.green - pixel2.green != 0) {
+            cout << "green " << ii << endl;
+            cout << (int) pixel1.green << " " << (int) pixel2.green << endl;
+            truthValue = false;
+        }
+        if (pixel1.blue - pixel2.blue != 0) {
+            cout << "blue " << ii << endl;
+            cout << (int) pixel1.blue << " " << (int) pixel2.blue << endl;
+            truthValue = false;
+        }
     }
-    return true;
+    return truthValue;
 }
 
 // top layer will call the bottom layer
@@ -197,7 +211,6 @@ ImageData ImageData::overLay(ImageData &layer) {
         Pixel& B = layer.picture.at(ii);
         Pixel& C = output.picture.at(ii);
 
-        //cout << B.getTone() << endl;
 
         double gray = sqrt(3*pow(128,2));
 
